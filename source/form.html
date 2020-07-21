@@ -22,10 +22,10 @@
               <a href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a>Каталог продукции</a>
+              <a href="catalog.html">Каталог продукции</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+              <a>Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -33,6 +33,109 @@
     </header>
 
     <main class="form-main">
+
+      <section class="form-container">
+        <h1 class="form-container__header">Подбор программы</h1>
+        <p class="form-container__text">
+          Заполните анкету, и мы подберем
+          программу питания для вашего кота
+        </p>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Данные кота</legend>
+            <label class="form__label form__label--text" for="name">
+              Имя:*
+            </label>
+            <input class="form__control form__control--text" id="name" type="text" name="name" placeholder="Барсик" required>
+
+            <label class="form__label form__label--number" for="weight">
+              Вес (кг):*
+            </label>
+            <input class="form__control form__control--number" id="weight" type="number" name="weight" placeholder="7" min="0" max="100" step="1" required>
+
+            <label class="form__label form__label--number" for="age">
+              Возраст (лет):
+            </label>
+            <input class="form__control form__control--number" id="age" type="number" name="age" min="0" max="100" step="1" placeholder="7">
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Выбор программы</legend>
+            <label class="form__label form__label--radio" for="weight-loss">
+              Похудение
+            </label>
+            <input class="form__control form__control--radio" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
+
+            <label class="form__label form__label--radio" for="weight-gain">
+              Набор массы
+            </label>
+            <input class="form__control form__control--radio" id="weight-gain" type="radio" name="program" value="weight-gain">
+
+            <label class="form__label form__label--radio" for="dont-know">
+              Не знаю (нужен ваш совет)
+            </label>
+            <input class="form__control form__control--radio" id="dont-know" type="radio" name="program" value="dont-know">
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <label class="form__label form__label--email" for="email">
+              E-mail:*
+            </label>
+            <input class="form__control form__control--email" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <label class="form__label form__label--tel" for="tel">
+              Телефон:*
+            </label>
+            <input class="form__control form__control--tel" id="tel" type="tel" name="email" placeholder="8 (960) 900-60-90" required>
+          </fieldset>
+
+          <p class="form__field">
+            <label class="form__label form__label--textarea" for="comment">Комментарий</label>
+            <textarea class="form__control form__control--textarea" id="comment" name="comment" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота">
+            </textarea>
+          </p>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Дополнительно</legend>
+            <input class="form__control form__control--checkbox" id="sugar-substitute" type="checkbox" name="sugar-substitute" value="yes" checked>
+            <label class="form__label form__label--checkbox" for="sugar-substitute">
+              Cахарозаменитель
+            </label>
+
+            <input class="form__control form__control--checkbox" id="water" type="checkbox" name="water" value="yes">
+            <label class="form__label form__label--checkbox" for="water">
+              Питьевая вода
+            </label>
+
+            <input class="form__control form__control--checkbox" id="milk" type="checkbox" name="milk" value="yes">
+            <label class="form__label form__label--checkbox" for="milk">
+              Молоко
+            </label>
+
+            <input class="form__control form__control--checkbox" id="vitamins" type="checkbox" name="vitamins" value="yes">
+            <label class="form__label form__label--checkbox" for="vitamins">
+              Витамины
+            </label>
+          </fieldset>
+
+          <button class="form__button button" type="submit">Отправить заявку</button>
+
+        </form>
+
+        <p class="form-container__desc form-container__desc--bottom">* — Обязательные поля</p>
+
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <div class="map__wrapper">
+          <p class="map__dealers">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="map__wrapper-map">
+          <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </div>
+      </section>
 
     </main>
 
