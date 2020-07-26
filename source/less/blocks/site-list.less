@@ -1,0 +1,37 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.site-list__item {
+  border-bottom: @grey-border-menu;
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  font-family: @title-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover:not(&--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(&--active) {
+    opacity: 0.3;
+  }
+}
+
+.site-list__item:last-child {
+  padding-bottom: 28px;
+}
+
+.site-list__link {
+  color: @basic-black;
+}
