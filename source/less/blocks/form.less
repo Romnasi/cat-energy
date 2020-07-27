@@ -1,0 +1,158 @@
+.form__fieldset {
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: none;
+  border-bottom: @form-border;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &--cat {
+    padding-bottom: 24px;
+  }
+
+  &--programs {
+    padding-top: 20px;
+    padding-bottom: 22px;
+  }
+
+  &--contacts {
+    margin-bottom: 27px;
+    border-bottom: none;
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+  }
+}
+
+.form__legend {
+  font-family: @title-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: @basic-black;
+
+  &--contacts {
+    padding-top: 26px;
+    margin-bottom: 32px;
+  }
+
+  &--additional {
+    margin-bottom: 34px;
+  }
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__item {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--programs {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__label {
+  .label-style;
+
+  &--radio {
+    color: @special-dark-grey-2;
+  }
+
+  &--textarea {
+    margin-bottom: 34px;
+    font-size: 24px;
+    line-height: 26px;
+    color: @basic-black;
+  }
+
+  &--checkbox {
+    color: @basic-black;
+  }
+}
+
+.form__control {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: @input-border;
+
+  &--text {
+    .input-text-style;
+
+    &::placeholder {
+      .placeholder-style;
+    }
+  }
+
+  &--number {
+    .input-text-style;
+
+    &::placeholder {
+      .placeholder-style;
+    }
+  }
+
+  &--email {
+    .input-text-style;
+
+    &::placeholder {
+      .placeholder-style;
+    }
+  }
+
+  &--tel {
+    .input-text-style;
+
+    &::placeholder {
+      .placeholder-style;
+    }
+  }
+
+  &--textarea {
+    margin-bottom: 27px;
+    .input-text-style;
+
+    &::placeholder {
+      .placeholder-style;
+    }
+  }
+}
+
+.form__field {
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form__button {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
