@@ -6,20 +6,25 @@
 
   border: none;
   border-bottom: @form-border;
+
   &:last-of-type {
     border-bottom: none;
   }
+
   &--cat {
     padding-bottom: 24px;
   }
+
   &--programs {
     padding-top: 20px;
     padding-bottom: 22px;
   }
+
   &--contacts {
     margin-bottom: 27px;
     border-bottom: none;
   }
+
   &--additional {
     margin-bottom: 34px;
   }
@@ -32,10 +37,12 @@
   font-size: 24px;
   line-height: 26px;
   color: @basic-black;
+
   &--contacts {
     padding-top: 26px;
     margin-bottom: 32px;
   }
+
   &--additional {
     margin-bottom: 34px;
   }
@@ -49,11 +56,14 @@
 
 .form__item {
   margin-bottom: 13px;
+
   &:last-child {
     margin-bottom: 0;
   }
+
   &--programs {
     margin-bottom: 25px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -61,17 +71,20 @@
 }
 
 .form__label {
-  font-family: @title-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: @special-dark-grey;
+  .label-style;
+
+  &--radio {
+    color: @special-dark-grey-2;
+  }
+
   &--textarea {
     margin-bottom: 34px;
     font-size: 24px;
     line-height: 26px;
+    color: @basic-black;
+  }
+
+  &--checkbox {
     color: @basic-black;
   }
 }
@@ -82,38 +95,45 @@
   padding-left: 15px;
   padding-right: 15px;
   border: @input-border;
+
   &--text {
-    .form__label;
+    .input-text-style;
 
     &::placeholder {
-      .form__label;
+      .placeholder-style;
     }
   }
+
   &--number {
-    .form__label;
-    &::placeholder {
-      .form__label;
-    }
-  }
-  &--email {
-    .form__label;
+    .input-text-style;
 
     &::placeholder {
-      .form__label;
+      .placeholder-style;
     }
   }
-  &--tel {
-    .form__label;
+
+  &--email {
+    .input-text-style;
+
     &::placeholder {
-      .form__label;
+      .placeholder-style;
     }
   }
+
+  &--tel {
+    .input-text-style;
+
+    &::placeholder {
+      .placeholder-style;
+    }
+  }
+
   &--textarea {
     margin-bottom: 27px;
-    .form__label;
+    .input-text-style;
 
     &::placeholder {
-      .form__label;
+      .placeholder-style;
     }
   }
 }
@@ -130,14 +150,9 @@
 .form__button {
   margin-left: 20px;
   margin-right: 20px;
-}
+  padding-left: 10px;
+  padding-right: 10px;
 
-.form-container__desc {
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-  color: @basic-black;
+  font-size: 16px;
+  line-height: 20px;
 }
