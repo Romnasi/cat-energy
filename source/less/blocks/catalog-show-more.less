@@ -1,16 +1,38 @@
 .catalog-show-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
 
   border-bottom: @grey-border;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 52px;
+    padding-bottom: 38px;
+    padding-left: 37px;
+    padding-right: 37px;
+
+    background-color: @basic-white;
+    border: 2px solid @basic-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .catalog-show-more__link {
   &--btn {
+    box-sizing: border-box;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 100%;
 
     display: block;
     font-family: @title-font;
@@ -34,6 +56,10 @@
 
   &--plus {
     margin-bottom: 23px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 49px;
+    }
   }
 
   &--plus path {
@@ -52,6 +78,7 @@
 .catalog-show-more__call-to-action {
   margin: 0;
   margin-bottom: 8px;
+  width: 205px;
 
   font-family: @title-font;
   font-style: normal;
@@ -61,12 +88,20 @@
   text-align: center;
   text-transform: uppercase;
   color: @dealers;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+    width: 135px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .catalog-show-more__desc {
   margin: 0;
   margin-bottom: 21px;
 
+  width: 221px;
   font-family: @main-font;
   font-style: normal;
   font-weight: normal;
@@ -74,4 +109,11 @@
   line-height: 16px;
   text-align: center;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: auto;
+    width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

@@ -1,3 +1,36 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
   background-color: @basic-grey;
+}
+
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    height: auto;
+  }
+}
+
+.page-footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

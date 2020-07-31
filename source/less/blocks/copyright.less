@@ -1,3 +1,14 @@
+.copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
 .copyright__link {
   &--name {
     font-family: @main-font;

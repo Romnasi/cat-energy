@@ -1,7 +1,19 @@
 .main-nav {
+  display: flex;
+  flex-direction: column;
   border-top: @grey-border-menu;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+  }
 }
 
 .main-nav__toggle {
-  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
