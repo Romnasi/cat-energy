@@ -1,9 +1,16 @@
 .how-it-works {
   padding-top: 27px;
   padding-bottom: 42px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 71px;
+  }
 }
 
 .how-it-works__header {
@@ -15,16 +22,37 @@
   font-size: 36px;
   line-height: 40px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .how-it-works__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .how-it-works__item {
+  position: relative;
   margin-bottom: 26px;
   padding-left: 80px;
 
+  box-sizing: border-box;
+  min-height: 80px;
   font-family: @main-font;
   font-style: normal;
   font-weight: normal;
@@ -34,5 +62,28 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 111px;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.how-it-works__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    width: 80px;
+    height: 80px;
   }
 }

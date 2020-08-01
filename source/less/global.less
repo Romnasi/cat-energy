@@ -1,5 +1,8 @@
 /* Global */
 body {
+  box-sizing: border-box;
+  // width: 100%;
+  min-width: @mobile-width;
   margin: 0;
   padding: 0;
   font-family: @main-font;
@@ -30,4 +33,18 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  min-width: @mobile-width - 20px * 2;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: 1220px;
+  }
 }
