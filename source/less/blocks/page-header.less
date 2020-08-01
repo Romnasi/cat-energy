@@ -10,7 +10,9 @@
   }
 
   & a {
-    color: @basic-white;
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
   }
 }
 
