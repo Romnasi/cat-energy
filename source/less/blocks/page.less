@@ -1,8 +1,12 @@
 .page {
   height: 100%;
-  width: 100%;
 }
 
 .page__body {
   min-height: 100%;
+
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
 }

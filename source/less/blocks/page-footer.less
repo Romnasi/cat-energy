@@ -12,8 +12,17 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
+    &--form-layout {
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
+    padding: 0;
+
+    width: 1220px;
   }
 }
 
