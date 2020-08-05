@@ -101,33 +101,53 @@
       </section>
 
       <section class="example">
-        <h2 class="example__header">Живой пример</h2>
-        <p class="example__text">
-          Борис сбросил 5 кг за 2 месяца, просто
-          заменив свой обычный корм на Cat
-          Energy Slim. Отличный результат без
-          изнуряющих тренировок! При этом он не
-          менял своих привычек и по-прежнему
-          спит по 16 часов в день.
-        </p>
-        <dl class="example__stats">
-          <div class="example__stats-item">
-            <dt class="example__key">5 кг</dt>
-            <dd class="example__desc">снижение веса</dd>
+        <div class="example__wrapper container">
+          <h2 class="example__header">Живой пример</h2>
+          <p class="example__text">
+            Борис сбросил 5 кг за 2 месяца, просто
+            заменив свой обычный корм на Cat
+            Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не
+            менял своих привычек и по-прежнему
+            спит по 16 часов в день.
+          </p>
+          <div class="example__stats-wrapper">
+            <dl class="example__stats">
+              <div class="example__stats-item">
+                <dt class="example__key">5 кг</dt>
+                <dd class="example__desc">снижение веса</dd>
+              </div>
+              <div class="example__stats-item">
+                <dt class="example__key">60 дней</dt>
+                <dd class="example__desc">затрачено времени</dd>
+              </div>
+            </dl>
+            <div class="example__price">
+              <span class="example__price-text">Затраты на питание: </span>
+              <span class="example__price-sum">15 000 руб.</span>
+            </div>
           </div>
-          <div class="example__stats-item">
-            <dt class="example__key">60 дней</dt>
-            <dd class="example__desc">затрачено времени</dd>
+
+
+          <div class="example__wrapper-image">
+            <ul class="example__photo-list">
+              <li class="example__item example__item--before">
+                <img src="img/before-mobile@1x.png" width="320" height="240" alt="Кот Борис до «Кэт энерджи»">
+              </li>
+              <li class="example__item example__item--after example__item--hidden">
+                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Кот Борис после «Кэт энерджи»">
+              </li>
+            </ul>
+
+            <div class="example__slider-controls">
+              <button class="example__slider-button example__slider-button--before" type="button">Было</button>
+              <div class="example__range-slider example__range-slider--before">
+                <div class="example__slider-track"></div>
+              </div>
+              <button class="example__slider-button example__slider-button--after" type="button">Стало</button>
+            </div>
           </div>
-        </dl>
-        <p class="example__price">Затраты на питание: 15 000 руб.</p>
-        <div class="example__wrapper-image example-slider">
-          <img src="https://via.placeholder.com/311x232" width="311" height="232" alt="Кот Борис до «Кэт энерджи»">
-          <img src="https://via.placeholder.com/251x240" width="251" height="240" alt="Кот Борис после «Кэт энерджи»">
-          <div class="example-slider__controls">
-            <button class="example-slider__button example-slider__button--before" type="button">Было</button>
-            <button class="example-slider__button example-slider__button--now" type="button">Стало</button>
-          </div>
+
         </div>
       </section>
 
@@ -136,12 +156,17 @@
     <footer class="page-footer">
       <section class="map">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="map__wrapper">
-          <p class="map__dealers">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="map__wrapper-text">
+          <div class="container">
+            <p class="map__dealers">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__address">
+              <span>ул. Большая Конюшенная, д. 19/8</span>
+              <span>Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <div class="map__wrapper-map">
-          <img src="../img/bg-map-mobile@1x.png" width="320" height="400" alt="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </div>
       </section>
 

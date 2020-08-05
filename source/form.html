@@ -34,63 +34,76 @@
     <main class="form-main">
 
       <section class="form-container">
-        <h1 class="form-container__header">Подбор программы</h1>
-        <p class="form-container__text">
-          Заполните анкету, и мы подберем
-          программу питания для вашего кота
-        </p>
-        <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__fieldset form__fieldset--cat">
-            <legend class="visually-hidden">Данные кота</legend>
-            <ul class="form__list">
-              <li class="form__item">
-                <label class="form__label form__label--text" for="name">
-                  Имя:*
-                </label>
-                <input class="form__control form__control--text" id="name" type="text" name="name" placeholder="Барсик" required>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--number" for="weight">
-                  Вес (кг):*
-                </label>
-                <input class="form__control form__control--number" id="weight" type="number" name="weight" placeholder="7" min="0" max="100" step="1" required>
-              </li>
-              <li class="form__item">
-                <label class="form__label form__label--number" for="age">
-                  Возраст (лет):
-                </label>
-                <input class="form__control form__control--number" id="age" type="number" name="age" min="0" max="100" step="1" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
+        <div class="form-container__intro">
+          <h1 class="form-container__header">Подбор программы</h1>
+          <p class="form-container__text">
+            Заполните анкету, и мы подберем
+            программу питания для вашего кота
+          </p>
+        </div>
 
-          <fieldset class="form__fieldset form__fieldset--programs">
-            <legend class="visually-hidden">Выбор программы</legend>
-            <ul class="form__list">
-              <li class="form__item form__item--programs">
-                <input class="form__control form__control--radio" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
-                <label class="form__label form__label--radio" for="weight-loss">
-                  Похудение
-                </label>
-              </li>
-              <li class="form__item form__item--programs">
-                <input class="form__control form__control--radio" id="weight-gain" type="radio" name="program" value="weight-gain">
-                <label class="form__label form__label--radio" for="weight-gain">
-                  Набор массы
-                </label>
-              </li>
-              <li class="form__item form__item--programs">
-                <input class="form__control form__control--radio" id="dont-know" type="radio" name="program" value="dont-know">
-                <label class="form__label form__label--radio" for="dont-know">
-                  Не знаю (нужен ваш совет)
-                </label>
-              </li>
-            </ul>
-          </fieldset>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+
+          <div class="form_wrapper-row">
+            <fieldset class="form__fieldset form__fieldset--cat">
+              <legend class="visually-hidden">Данные кота</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <label class="form__label form__label--text" for="name">
+                    Имя:*
+                  </label>
+                  <input class="form__control form__control--text" id="name" type="text" name="name" placeholder="Барсик" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label form__label--number" for="weight">
+                    Вес (кг):*
+                  </label>
+                  <input class="form__control form__control--number" id="weight" type="number" name="weight" placeholder="7" min="0" max="100" step="1" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label form__label--number" for="age">
+                    Возраст (лет):
+                  </label>
+                  <input class="form__control form__control--number" id="age" type="number" name="age" min="0" max="100" step="1" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset form__fieldset--programs">
+              <legend class="visually-hidden">Выбор программы</legend>
+              <ul class="form__list form__list--programs">
+                <li class="form__item form__item--programs">
+                  <input class="form__control form__control--radio" id="weight-loss" type="radio" name="program" value="weight-loss" checked>
+                  <label class="form__label form__label--radio" for="weight-loss">
+                    Похудение
+                  </label>
+                </li>
+                <li class="form__item form__item--programs">
+                  <input class="form__control form__control--radio" id="weight-gain" type="radio" name="program" value="weight-gain">
+                  <label class="form__label form__label--radio" for="weight-gain">
+                    Набор массы
+                  </label>
+                </li>
+                <li class="form__item form__item--programs">
+                  <input class="form__control form__control--radio" id="dont-know" type="radio" name="program" value="dont-know">
+                  <label class="form__label form__label--radio" for="dont-know">
+                    Не знаю (нужен ваш совет)
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+          </div>
 
           <fieldset class="form__fieldset form__fieldset--contacts">
-            <legend class="form__legend form__legend--contacts">Контактные данные (владельца кота)</legend>
-            <ul class="form__list">
+            <div class="form__header-wrapper">
+              <div class="container">
+                <legend class="form__legend form__legend--contacts form__header">
+                  Контактные данные (владельца кота)
+                </legend>
+              </div>
+            </div>
+            <ul class="form__list form__list--contacts">
               <li class="form__item">
                 <label class="form__label form__label--email" for="email">
                   E-mail:*
@@ -106,14 +119,28 @@
             </ul>
           </fieldset>
 
-          <p class="form__field">
-            <label class="form__label form__label--textarea" for="comment">Комментарий</label>
-            <textarea class="form__control form__control--textarea" id="comment" name="comment" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </p>
+          <div class="form__field form__field--textarea">
+            <div class="form__header-wrapper">
+              <div class="container">
+                <label class="form__label form__label--textarea form__header" for="comment">
+                  Комментарий
+                </label>
+              </div>
+            </div>
+            <div class="form__textarea-wrapper">
+              <textarea class="form__control form__control--textarea" id="comment" name="comment" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </div>
 
           <fieldset class="form__fieldset form__fieldset--additional">
-            <legend class="form__legend form__legend--additional">Дополнительно</legend>
-            <ul class="form__list">
+            <div class="form__header-wrapper">
+              <div class="container">
+                <legend class="form__legend form__legend--additional form__header">
+                  Дополнительно
+                </legend>
+              </div>
+            </div>
+            <ul class="form__list form__list--additional">
               <li class="form__item">
                 <input class="form__control form__control--checkbox" id="sugar-substitute" type="checkbox" name="sugar-substitute" value="yes" checked>
                 <label class="form__label form__label--checkbox" for="sugar-substitute">
@@ -141,11 +168,15 @@
             </ul>
           </fieldset>
 
-          <button class="form__button button" type="submit">Отправить заявку</button>
-
+          <div class="form__btn-wrapper">
+            <button class="form__button button" type="submit">
+              Отправить заявку
+            </button>
+            <p class="form__desc">
+              * — Обязательные поля
+            </p>
+          </div>
         </form>
-
-        <p class="form-container__desc form-container__desc--bottom">* — Обязательные поля</p>
 
       </section>
 
@@ -154,17 +185,22 @@
     <footer class="page-footer">
       <section class="map">
         <h2 class="visually-hidden">Наши контакты</h2>
-        <div class="map__wrapper map__wrapper--grey">
-          <p class="map__dealers">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="map__wrapper-text map__wrapper-text--grey map__wrapper-text--form-layout">
+          <div class="container">
+            <p class="map__dealers">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__address">
+              <span>ул. Большая Конюшенная, д. 19/8</span>
+              <span>Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
         <div class="map__wrapper-map">
-          <img src="https://via.placeholder.com/320x362" width="320" height="362" alt="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <img src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </div>
       </section>
 
-      <div class="page-footer__wrapper container">
-        <a class="page-footer__logo" href="index.html">
+      <div class="page-footer__wrapper container page-footer__wrapper--form-layout">
+        <a class="page-footer__logo">
           <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Логотип «Кэт энерджи»">
         </a>
 

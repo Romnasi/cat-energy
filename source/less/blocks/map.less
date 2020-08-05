@@ -1,16 +1,69 @@
-.map__wrapper {
+.map {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.map__wrapper-text {
   padding-top: 28px;
   padding-bottom: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: @basic-white;
 
   &--grey {
     background-color: @basic-grey;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 62px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
+    &--form-layout {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+
+    position: absolute;
+    top: 95px;
+    width: 100%;
+
+    background-color: transparent;
+
+    display: grid;
+    grid-template-columns: 1fr 570px 650px 1fr;
+  }
+}
+
+.map__wrapper-text .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-top: 62px;
+    padding-bottom: 59px;
+    padding-left: 76px;
+    padding-right: 89px;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    box-sizing: border-box;
+    width: 100%;
+    background-color: @basic-white;
+  }
 }
 
 .map__dealers {
+  margin: 0;
+  padding-right: 10px;
+
   font-family: @title-font;
   font-style: normal;
   font-weight: normal;
@@ -18,17 +71,40 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dealers;
+
+  @media (min-width: @tablet-width) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .map__address {
+  margin: 0;
+
   font-family: @main-font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 82px;
+    width: 171px;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
 }
 
 .map__wrapper-map {
-  background-color: @special-grey-3;
+  display: flex;
+  justify-content: center;
+  background-color: @basic-green;
 }
