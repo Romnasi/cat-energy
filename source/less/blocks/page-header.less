@@ -14,10 +14,17 @@
       color: @basic-white;
     }
   }
+
+  & .site-list__item--active a {
+    @media (min-width: @desktop-width) {
+      border-color: @basic-white;
+    }
+  }
 }
 
 .page-header__wrapper {
   box-sizing: border-box;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -35,20 +42,22 @@
 }
 
 .page-header__logo {
+  margin-bottom: 5px;
+
   padding-left: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  height: 66px;
+  height: 60px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
-    height: 90px;
+    height: 106px;
   }
 
   @media (min-width: @desktop-width) {
-    height: 140px;
+    height: 165px;
   }
 }

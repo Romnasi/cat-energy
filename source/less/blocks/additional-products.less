@@ -1,6 +1,10 @@
 .additional-products {
   padding-top: 28px;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 69px;
+  }
+
   @media (min-width: @desktop-width) {
     padding-top: 75px;
     padding-bottom: 86px;
@@ -21,10 +25,15 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
+    padding-left: 37px;
+    padding-right: 35px;
     padding-bottom: 80px;
 
     font-size: 36px;
     line-height: 36px;
+
+    display: inline-block;
+    background-color: @basic-white;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,12 +49,12 @@
 .additional-products__header-wrapper {
   position: relative;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     &::before {
       content: "";
       position: absolute;
       z-index: -1;
-      top: 23px;
+      top: 22px;
 
       width: 100%;
       height: 2px;
