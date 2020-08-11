@@ -1,21 +1,22 @@
 .how-it-works {
-  padding-top: 27px;
-  padding-bottom: 42px;
+  padding-top: 28px;
+  padding-bottom: 20px;
   background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
     padding-top: 45px;
-    padding-bottom: 47px;
+    padding-bottom: 102px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 71px;
+    padding-bottom: 82px;
   }
 }
 
 .how-it-works__header {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   font-family: @title-font;
   font-style: normal;
   font-weight: normal;
@@ -33,22 +34,30 @@
 .how-it-works__list {
   margin: 0;
   padding: 0;
-  list-style: none;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 133px;
+
+    counter-reset: myCounter;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
 
 .how-it-works__item {
   position: relative;
-  margin-bottom: 26px;
+  z-index: 2;
+
+  list-style: none;
+
+  margin-bottom: 0;
   padding-left: 80px;
 
   box-sizing: border-box;
@@ -65,17 +74,24 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 111px;
+    padding-top: 112px;
     padding-left: 0;
+    padding-right: 65px;
+
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 112px;
+    padding-right: 0;
+  }
 }
 
-.how-it-works__item::before {
+.how-it-works__item::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
   width: 60px;
   height: 60px;
@@ -86,4 +102,26 @@
     width: 80px;
     height: 80px;
   }
+}
+
+.how-it-works__item::before {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  counter-increment: myCounter;
+  content: counter(myCounter);
+
+  position: absolute;
+  top: -40px;
+  left: 112px;
+  z-index: -1;
+
+  display: inline-block;
+
+  font-family: @title-font;
+  font-size: 280px;
+  line-height: 280px;
+  text-align: center;
+  color: @basic-grey;
 }

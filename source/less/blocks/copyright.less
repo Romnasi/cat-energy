@@ -1,4 +1,7 @@
 .copyright {
+  padding-top: 22px;
+  padding-bottom: 18px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,6 +14,8 @@
 
 .copyright__link {
   &--name {
+    padding-bottom: 5px;
+
     font-family: @main-font;
     font-style: normal;
     font-weight: normal;
@@ -21,6 +26,12 @@
 
   &--name:active {
     color: @dark-grey-opacity-30;
+  }
+
+  &--logo {
+    @media (min-width: @tablet-width) {
+      margin-left: 24px;
+    }
   }
 
   &--logo path {
