@@ -51,8 +51,8 @@
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    padding-top: 62px;
-    padding-bottom: 59px;
+    padding-top: 66px;
+    padding-bottom: 54px;
     padding-left: 76px;
     padding-right: 89px;
 
@@ -82,6 +82,10 @@
     font-size: 20px;
     line-height: 24px;
   }
+
+  @media (min-width: @desktop-width) {
+    line-height: 25px;
+  }
 }
 
 .map__address {
@@ -95,6 +99,7 @@
   color: @special-dark-grey;
 
   @media (min-width: @tablet-width) {
+    margin-left: auto;
     padding-bottom: 5px;
 
     display: flex;
@@ -103,10 +108,15 @@
 
     min-height: 76px;
     width: 171px;
-    margin-left: auto;
+
     font-size: 16px;
     line-height: 18px;
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 69px;
+    text-align: left;
   }
 }
 
@@ -114,10 +124,21 @@
   display: flex;
   justify-content: center;
   background-color: @basic-green;
-  height: 400px;
+  height: 362px;
 
-  & img {
-    width: 768px;
+  @media (min-width: @tablet-width) {
     height: 400px;
+
+    & img {
+      width: 768px;
+      height: 400px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & img {
+      width: 1440px;
+      height: 400px;
+    }
   }
 }
