@@ -35,7 +35,7 @@
     @media (min-width: @tablet-width) and (max-width: @tablet-width-max) {
       padding-left: 70px;
       padding-right: 70px;
-      padding-bottom: 72px;
+      padding-bottom: 53px;
     }
 
     @media (min-width: @desktop-width) {
@@ -66,7 +66,7 @@
     border-bottom: none;
 
     @media (min-width: @tablet-width) {
-      margin-bottom: 65px;
+      margin-bottom: 45px;
     }
 
     @media (min-width: @desktop-width) {
@@ -76,7 +76,7 @@
   }
 
   &--additional {
-    margin-bottom: 41px;
+    margin-bottom: 38px;
 
     border-bottom: none;
 
@@ -110,7 +110,7 @@
   }
 
   &--additional {
-    margin-bottom: 39px;
+    margin-bottom: 42px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 63px;
@@ -216,6 +216,24 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  &--email {
+    position: relative;
+
+    & svg {
+      position: absolute;
+      right: 15px;
+    }
+  }
+
+  &--tel {
+    position: relative;
+
+    & svg {
+      position: absolute;
+      right: 15px;
     }
   }
 }
@@ -404,6 +422,7 @@
 
   &--email {
     .input-text-style;
+    position: relative;
 
     flex-grow: 1;
 
