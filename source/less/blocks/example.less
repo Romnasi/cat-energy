@@ -14,12 +14,26 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    z-index: 1;
+
     padding-bottom: 4px;
 
     box-sizing: border-box;
     display: flex;
-    background-image: linear-gradient(to top, @example-background 72%, @basic-white 72%);
+    background-image: none;
     border-top: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 461px;
+      background-image: linear-gradient(to right, @basic-grey calc(50% - 40px), @example-background calc(50% - 40px));
+    }
   }
 }
 
@@ -208,7 +222,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-color: @example-background;
+    background-color: @basic-grey;
   }
 }
 
