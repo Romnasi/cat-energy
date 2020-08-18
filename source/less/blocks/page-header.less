@@ -43,21 +43,32 @@
 
 .page-header__logo {
   margin-bottom: 5px;
-
   padding-left: 20px;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
   box-sizing: border-box;
   height: 60px;
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
     height: 106px;
+
+    & img {
+      width: 174px;
+      height: 52;
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: 165px;
+
+    & img {
+      width: 202px;
+      height: 59px;
+    }
   }
 }
