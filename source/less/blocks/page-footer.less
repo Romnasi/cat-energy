@@ -32,17 +32,12 @@
   justify-content: center;
   height: 94px;
 
-  @media (max-width: @tablet-width - 1px) {
-    & img {
-      position: relative;
-      top: 4px;
-    }
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    min-height: 144px;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: -3px;
-
-    justify-content: flex-start;
-    height: auto;
+  @media (min-width: @desktop-width) {
+    min-height: 150px;
   }
 }

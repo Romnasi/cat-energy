@@ -85,7 +85,44 @@
   min-height: 112px;
 
   @media (min-width: @tablet-width) {
-    min-height: 200px;
+    position: relative;
+
+    height: 200px;
+  }
+}
+
+.catalog-products__link-image {
+  line-height: 0;
+
+  @media (min-width: @tablet-width) {
+    & img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 325px;
+      height: auto;
+
+      margin-left: -325px / 2;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    & img {
+      top: -10px;
+
+      margin-left: -245px / 2;
+    }
+  }
+}
+
+.catalog-products__item:nth-child(2n+2) img {
+  @media (min-width: @tablet-width) {
+    top: -30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -38px;
   }
 }
 

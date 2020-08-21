@@ -141,10 +141,18 @@
           <div class="example__wrapper-image container">
             <ul class="example__photo-list">
               <li class="example__item example__item--before">
-                <img src="img/before-mobile@1x.png" width="311" height="232" alt="Кот Борис до «Кэт энерджи»">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Кот Борис до «Кэт энерджи»">
+                </picture>
               </li>
               <li class="example__item example__item--after example__item--hidden">
-                <img src="img/after-mobile@1x.png" width="320" height="240" alt="Кот Борис после «Кэт энерджи»">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Кот Борис после «Кэт энерджи»">
+                </picture>
               </li>
             </ul>
 
@@ -174,7 +182,7 @@
           </div>
         </div>
         <div class="map__wrapper-map">
-          <img src="img/bg-map-mobile@1x.png" width="320" height="362" alt="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <!-- Здесь будет карта через api, а это описание к ней "Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" -->
         </div>
       </section>
 
