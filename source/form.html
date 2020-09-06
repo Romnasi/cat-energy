@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог магазина «Кэт энерджи»</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
 
@@ -49,7 +49,7 @@
             <img src="img/logo-mobile.svg" width="190" height="38" alt="Логотип «Кэт энерджи» с супер-котом">
           </picture>
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -238,7 +238,7 @@
           </div>
         </div>
         <div class="map__wrapper-map">
-          <!-- Здесь будет карта через api, а это описание к ней "Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300316!2d30.320858716173465!3d59.93871916905408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599344492460!5m2!1sru!2sru" width="100%" height="362px" allowfullscreen title="Офис магазина функционального питания для котов «Кэт энерджи» ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></iframe>
         </div>
       </section>
 
@@ -291,6 +291,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>
