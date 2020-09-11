@@ -11,6 +11,8 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
+const htmlmin = require('gulp-htmlmin');
+const terser = require('gulp-terser');
 
 // Styles
 const styles = () => {
@@ -23,7 +25,7 @@ const styles = () => {
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())
-    .pipe(rename("styles.min.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
@@ -50,6 +52,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/*.html", gulp.series(html));
+  gulp.watch("source/js/**/*.js", gulp.series(js));
 }
 
 // Images
@@ -88,7 +91,6 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.ico"
   ], {
     base: "source"
@@ -108,11 +110,24 @@ exports.clean = clean;
 //html
 const html = () => {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./build"))
     .pipe(sync.stream());
 }
 
 exports.html = html;
+
+// js
+const js = () => {
+  return gulp.src("source/js/**/*.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.js = js;
 
 // Build
 const build = gulp.series(
@@ -120,7 +135,8 @@ const build = gulp.series(
   copy,
   styles,
   sprite,
-  html
+  html,
+  js
 );
 
 exports.build = build;
