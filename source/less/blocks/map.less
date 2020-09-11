@@ -27,16 +27,19 @@
   }
 
   @media (min-width: @desktop-width) {
+    z-index: 1;
+
     padding: 0;
+    width: 570px;
 
     position: absolute;
     top: 95px;
-    width: 100%;
+    left: calc(100% / 2 - 610px);
 
     background-color: transparent;
 
-    display: grid;
-    grid-template-columns: 1fr 570px 650px 1fr;
+    display: block;
+    grid-template-columns: 570px;
   }
 }
 
