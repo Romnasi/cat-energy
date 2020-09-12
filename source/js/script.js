@@ -49,3 +49,40 @@ ymaps.ready(function () {
   myMap.geoObjects
   .add(myPlacemark);
 });
+
+
+// slider
+
+var exampleSlider = document.querySelector('.example__wrapper-image');
+var beforeButton = document.querySelector('.example__slider-button--before');
+var afterButton = document.querySelector('.example__slider-button--after');
+
+var beforeSlide = document.querySelector('.example__item--before');
+var afterSlide = document.querySelector('.example__item--after');
+var rangeSlider = document.querySelector('.example__range-slider');
+
+beforeButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (beforeSlide.classList.contains("example__item--hidden")) {
+    beforeSlide.classList.remove('example__item--hidden');
+    afterSlide.classList.add('example__item--hidden');
+  }
+
+  if (rangeSlider.classList.contains("example__range-slider--after")) {
+    rangeSlider.classList.remove('example__range-slider--after');
+    rangeSlider.classList.add('example__range-slider--before');
+  }
+});
+
+afterButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (afterSlide.classList.contains('example__item--hidden')) {
+    afterSlide.classList.remove('example__item--hidden');
+    beforeSlide.classList.add('example__item--hidden');
+  }
+
+  if (rangeSlider.classList.contains("example__range-slider--before")) {
+    rangeSlider.classList.remove('example__range-slider--before');
+    rangeSlider.classList.add('example__range-slider--after');
+  }
+});
