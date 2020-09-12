@@ -17,6 +17,14 @@
   }
 }
 
+.site-list--over {
+  & a {
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
+  }
+}
+
 .site-list__item {
   position: relative;
 
@@ -78,5 +86,11 @@
     padding-bottom: 6px;
 
     border-bottom: 2px solid @basic-green;
+  }
+}
+
+.site-list__item--over a {
+  @media (min-width: @desktop-width) {
+    border-color: @basic-white;
   }
 }

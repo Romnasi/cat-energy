@@ -3,9 +3,7 @@
   grid-template-columns: 1fr;
 }
 
-.form_wrapper-row {
-
-
+.form__wrapper-row {
   width: 100%;
 
   @media (min-width: @desktop-width) {
@@ -371,6 +369,9 @@
   box-sizing: border-box;
   height: 46px;
 
+  &:hover {border-color: @special-grey;
+  }
+
   &:focus {
     padding-left: 14px;
 
@@ -422,6 +423,17 @@
     .input-text-style;
 
     flex-grow: 1;
+
+    // hide the number input’s spin box
+    input[type=number] {
+        -moz-appearance:textfield; /* Firefox */
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
