@@ -266,6 +266,7 @@
       padding-left: 60px;
     }
 
+    // custom radio button
     &::before {
       content: "";
       position: absolute;
@@ -332,6 +333,7 @@
       padding-left: 59px;
     }
 
+    // custom checkbox
     &::before {
       content: "";
       position: absolute;
@@ -369,7 +371,8 @@
   box-sizing: border-box;
   height: 46px;
 
-  &:hover {border-color: @special-grey;
+  &:hover {
+    border-color: @special-grey;
   }
 
   &:focus {
@@ -423,17 +426,6 @@
     .input-text-style;
 
     flex-grow: 1;
-
-    // hide the number input’s spin box
-    input[type=number] {
-        -moz-appearance:textfield; /* Firefox */
-    }
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
 
     @media (min-width: @tablet-width) {
       font-size: 20px;
@@ -553,7 +545,27 @@
   }
 }
 
-// form__control focus style
+// form__control--radio hover
+.form__control--radio:hover + label::before {
+  border-color: @hover-checkbox-radio;
+}
+
+// form__control--radio focus
+.form__control--radio:focus + label::before {
+  box-shadow: 0 0 0 2px @custom-focus;
+}
+
+// form__control--checkbox hover
+.form__control--checkbox:hover + label::before {
+  border-color: @hover-checkbox-radio;
+}
+
+// form__control--checkbox focus
+.form__control--checkbox:focus + label::before {
+  box-shadow: 0 0 0 2px @custom-focus;
+}
+
+// form__control--email focus
 .form__control--email:focus {
   @media (min-width: @tablet-width) {
     padding-left: 19px;
@@ -629,18 +641,32 @@
   }
 }
 
-// disabled
-.form__control--radio:disabled + .form__label--radio::before {
+// radio active
+.form__control--radio:active + .form__label--radio::before {
   border-color: fade(@special-grey, 30%);
 }
 
-.form__control--radio:disabled + .form__label--radio {
+.form__control--radio:active + .form__label--radio {
   color: fade(@special-dark-grey-2, 30%);
 }
 
-// disabled - checked
+// radio active - checked
+.form__control--radio:active + .form__label--radio::after {
+  background-color: fade(@basic-green, 30%);
+}
+
+// radio disbled
+.form__control--radio:disabled + .form__label--radio::before {
+  border-color: fade(@special-grey, 10%);
+}
+
+.form__control--radio:disabled + .form__label--radio {
+  color: fade(@special-dark-grey-2, 10%);
+}
+
+// radio active - checked
 .form__control--radio:disabled + .form__label--radio::after {
-  background-color: fade(@special-grey, 30%);
+  background-color: fade(@basic-green, 10%);
 }
 
 // Custom checkbox
@@ -664,15 +690,25 @@
   }
 }
 
-// disabled
-.form__control--checkbox:disabled + .form__label--checkbox::before {
+// checkbox active
+.form__control--checkbox:active + .form__label--checkbox::before {
   border-color: fade(@special-grey, 30%);
 }
 
-.form__control--checkbox:disabled + .form__label--checkbox {
+.form__control--checkbox:active + .form__label--checkbox {
   color: fade(@basic-black, 30%);
 }
 
+// checkbox disbled
+.form__control--checkbox:disabled + .form__label--checkbox::before {
+  border-color: fade(@special-grey, 10%);
+}
+
+.form__control--checkbox:disabled + .form__label--checkbox {
+  color: fade(@basic-black, 10%);
+}
+
+// form__textarea-wrapper
 .form__textarea-wrapper {
   .container;
   margin-bottom: 24px;
